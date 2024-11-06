@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Page</title>
+    <script>
+      //   localStorage.clear();
+      var myObj = { id: 19, name: "Angelina", email: "Joliet@yahoo.com" };
+      var MyJson = JSON.stringify(myObj);
+      var myObja = { id: 21, name: "Rodriguez", email: "Yankees@yahoo.com" };
+      var MyJsona = JSON.stringify(myObja);
+      localStorage.setItem("mykey", MyJson);
+      //sessionStorage.setItem("mykey", MyJsona);
+    </script>
+  </head>
+  <body>
+    <div
+      id="adiv"
+      style="background-color: black; color: chartreuse; font-size: x-large"
+    ></div>
+    <script>
+      var mysp = document.getElementById("adiv");
+      mysp.innerHTML = localStorage.getItem("mykey").toString();
+    </script>
+  </body>
+</html>
